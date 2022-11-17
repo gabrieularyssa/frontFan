@@ -1,0 +1,84 @@
+.container{
+    display: flex;
+    width: 100%;
+}
+.dataCad{
+    width: 100%;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    /* background-color: #f9e1e1; */
+}
+.dataform{
+    width: 95%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    background-color: #ffffff;
+    color: slategrey;
+    margin:0 auto;
+    border-radius: 10px;
+    margin-top: 50px;
+    
+
+}
+.dataCad .dataform section{
+    display: flex;
+    width: 100%;
+    font-weight: 600;
+    justify-content: center;
+    align-items: center;
+    margin-bottom:50px;
+    
+} 
+.dataCad .dataform section input{
+    height: 30px;
+    width: 80px;
+    margin-left: 20px;
+    background-color: #ff0000;
+    border-radius: 8px;
+    cursor: pointer;
+    border: none;
+}
+.dataform label input{
+    width: 345px;
+    height: 30px;
+    margin: 15px;
+    background-color: #ffffff;
+    color: black;
+    font-size:larger;
+    border-radius: 10px;
+    border-color: rgb(179, 165, 165);
+}
+label{
+    font-weight: 600;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.sectionForm{
+    width: 100%;
+}
+header{
+    width: 100%;
+}
+header input{
+    width: 75%;
+    height: 35px;
+    margin: 15px;
+    border-radius: 10px;
+    background-color: #ffffff;
+    color: black;
+}
+.btnName{
+    background-color: #ffffff;
+    width: 70%;
+    height: 35px;
+    border-radius: 8px;
+    color: black;
+    font-weight: 600;
+    font-size: larger;
+}
