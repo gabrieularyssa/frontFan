@@ -1,9 +1,11 @@
 import './metricas.css'
+import { useState } from 'react'
 import Menu from '../menuLateral/menu'
 import MetricasCad from './metricasCad'
 // import { WiDirectionDown } from 'react-icons/wi'
 
 function MetricasList(){
+    const [search, setSearch] = useState()
     const handleSubmit = (e) => {
         e.preventDefaul()
     }
@@ -11,14 +13,31 @@ function MetricasList(){
         <div className='container'>
             <Menu/>
             <div className="dataCad">
-                <form className='dataform'>
+                <form className='dataform' onSubmit={handleSubmit}>
                     <header>
-                        <input type="text" className="search" placeholder='🔍 Pesquise Aqui'/>
+                        <input type="text" className="search" placeholder='🔍 Pesquise Aqui' onChange={(e)=>setSearch(e.target.value)} value={search}/>
                     </header>
+                    <section>
+                        <p>Métricas</p>
+                    </section>
                     {/* para cada item na tabela criar um botao que faça requisição de metricas */}
-                    <input type="submit" value="Nome do usuario a avaliar metricas" name='btnSubmit' className='btnName' onSubmit={handleSubmit}/>
+                    <div className="clientes">
+                        <details>
+                            <summary>Francisco José da Silva Oliveira</summary>
+                            <MetricasCad />
+                        </details>
+                        <details>
+                            <summary>Gabriela Laryssa Oliveira Moreira</summary>
+                            <MetricasCad />
+                        </details>
+                        <details>
+                            <summary>Francisco José da Silva Oliveira</summary>
+                            <MetricasCad />
+                        </details>
+                    </div>
+                    
                 </form>
-                    <MetricasCad />
+                    
             </div> 
         </div>
     )

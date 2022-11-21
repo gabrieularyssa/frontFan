@@ -11,15 +11,15 @@
     /* background-color: #f9e1e1; */
 }
 .dataform{
-    width: 95%;
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
     background-color: #ffffff;
     color: slategrey;
-    margin:0 auto;
+    /* margin:0 auto;
+    margin-top: 50px; */
     border-radius: 10px;
-    margin-top: 50px;
     
 
 }
@@ -42,12 +42,11 @@
     border: none;
 }
 .dataform label input{
-    width: 345px;
+    width: 450px;
     height: 30px;
     margin: 15px;
     background-color: #ffffff;
     color: black;
-    font-size:larger;
     border-radius: 10px;
     border-color: rgb(179, 165, 165);
 }
@@ -64,9 +63,12 @@ label{
 }
 header{
     width: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
 }
 header input{
-    width: 75%;
+    width: 90%;
     height: 35px;
     margin: 15px;
     border-radius: 10px;

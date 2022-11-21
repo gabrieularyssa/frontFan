@@ -10,16 +10,15 @@ const [txConversao, setTxConversao] = useState()
 const [txRetencao, setTxRetencao] = useState()
 const [controleAcesso, setControleAcesso] = useState()
 const [faturamento, setFaturamento] = useState()
-const [search, setSearch] = useState()
+
 
     function handleSubmit(e){
         e.preventDefault()
         console.log('manipular aqui o envio do form')
     }
-
     return(
-        <div className='container'>
-            <div className="dataCad">
+        <div className='containerData'>
+            <div className="dataCadCadastro">
                 <form className='dataform' onSubmit={handleSubmit}>
                     <label>
                     Taxa Credenciamento/Mês:
@@ -41,6 +40,9 @@ const [search, setSearch] = useState()
                     Faturamento (R$):
                         <input type="text" name='faturamento' onChange={(e)=> setFaturamento(e.target.value)} value={faturamento}/>
                     </label>
+                    <div className='submit'>
+                        <input type="submit" value="Salvar" />
+                    </div>
                 </form>
             </div> 
         </div>

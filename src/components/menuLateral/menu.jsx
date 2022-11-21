@@ -11,7 +11,7 @@ import { HiOutlineIdentification } from 'react-icons/hi'
 
 function Menu(){
     return(
-            <section className="menu-vert">
+            <div className="menu-vert">
                 <section className='logo'>
                     <img src="../../../src/images/logo.png"/>
                 </section>
@@ -49,7 +49,7 @@ function Menu(){
                 <section className='footer'>
                     <img src="../../../src/images/W51.png"/>
                 </section>
-            </section>
+            </div>
     )
 }   
 export default Menu

@@ -2,25 +2,14 @@
     display: flex;
     width: 100%;
 }
-.clientes{
-    height: 100%;
-    width: 80%;
-    display: flex;
-    flex-direction: column;
-}
 .dataCad{
     width: 100%;
     background-color: #ffffff;
     display: flex;
     flex-direction: column;
     height: auto;
-    overflow-y: scroll; 
-}
-.dataCadCadastro{
-    width: 100%;
-    background-color: #ffffff;
-    display: flex;
-    height: auto;
+    /* background-color: #f9e1e1; */
+    overflow-y: scroll;
 }
 .dataform{
     width: 100%;
@@ -29,6 +18,8 @@
     justify-content: space-around;
     background-color: #ffffff;
     color: slategrey;
+    /* margin:0 auto;
+    margin-top: 50px; */
     border-radius: 10px;
 }
 .dataCad .dataform section{
@@ -37,23 +28,14 @@
     font-weight: 600;
     justify-content: center;
     align-items: center;
+    margin-bottom:50px;
 } 
-.dataCad .dataform section input{
-    height: 30px;
-    width: 80px;
-    margin-left: 20px;
-    background-color: #ff0000;
-    border-radius: 8px;
-    cursor: pointer;
-    border: none;
-}
 .dataform label input{
-    width: 345px;
+    width: 450px;
     height: 30px;
     margin: 15px;
     background-color: #ffffff;
     color: black;
-    font-size:larger;
     border-radius: 10px;
     border-color: rgb(179, 165, 165);
 }
@@ -64,9 +46,6 @@ label{
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-}
-.sectionForm{
-    width: 100%;
 }
 header{
     width: 100%;
@@ -82,38 +61,14 @@ header input{
     background-color: #ffffff;
     color: black;
 }
-.btnName{
-    background-color: #ffffff;
-    width: 70%;
-    height: 35px;
-    border-radius: 8px;
-    color: black;
-    font-weight: 600;
-    font-size: larger;
-}
+/*  */
 .submit{
-    width: 100%;
-    margin-bottom: 25px;
-}
-.submit input{
-    background-color: #ff0000;
-    border: none;
-    border-radius: 8px;
-    width: 75px;
     height: 30px;
-    font-size: large;
-}
-details{
-    border: #ff0000 3px;
-}
-summary{
-    width: 100%;
-    height: 35px;
-    margin: 5px;
-    font-size: larger;
-    cursor: pointer;
-    background-color: #ffffff;
-    text-align: center;
+    width: 120px;
+    margin-left: 20px;
+    background-color: #ff0000;
     border-radius: 8px;
-    border: solid black 1px;
+    cursor: pointer;
+    border: none;
+    margin-top: 49px;
 }
