@@ -1,10 +1,10 @@
-import './credenciamentoList.css'
-import Menu from '../menuLateral/menu'
+import './usuarioList.css'
 import {FiEdit} from 'react-icons/fi'
 import {MdAdd} from 'react-icons/md'
 import { useState } from 'react'
+import Menu from '../../components/menuLateral/menu'
 
-function CredenciamentoList(){
+function UsuariosList(){
     const [search, setSearch] = useState()
     const handleSubmit = (e) => {
         e.preventDefaul()
@@ -18,13 +18,13 @@ function CredenciamentoList(){
                         <input type="text" className="search" placeholder='🔍 Pesquise Aqui' onChange={(e)=>setSearch(e.target.value)}/>
                     </header>
                     <section>
-                        <p>Credenciados</p><button><MdAdd/> Adicionar</button>
+                        <p>Listagem de Usuários</p><button><MdAdd/> Adicionar</button>
                     </section>
                 </form>
                     {/* para cada item na tabela criar um botao que faça requisição de metricas */}
                     <div className="clientes">
                         <section className='sectionList'>
-                            <span>Nome completo do usuario credenciado</span>
+                            <span>Nome completo do usuario cadastrado</span>
                             <button><FiEdit/></button>
                         </section>
                     </div>
@@ -33,4 +33,4 @@ function CredenciamentoList(){
     )
 }
 
-export default CredenciamentoList
+export default UsuariosList

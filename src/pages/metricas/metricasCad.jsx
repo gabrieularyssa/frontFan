@@ -1,15 +1,15 @@
-import x from '../metricas/metricas.css'
-import Menu from '../menuLateral/menu'
+// import x from '../metricas/metricas.css'
+// import Menu from '../menuLateral/menu'
 import {useState} from 'react'
 
 
 function MetricasCad(){
 //gerenciamento de input com useState
-const [txCredenciamento, setTxCredenciamento] = useState()
-const [txConversao, setTxConversao] = useState()
-const [txRetencao, setTxRetencao] = useState()
-const [controleAcesso, setControleAcesso] = useState()
-const [faturamento, setFaturamento] = useState()
+    const [txCredenciamento, setTxCredenciamento] = useState()
+    const [txConversao, setTxConversao] = useState()
+    const [txRetencao, setTxRetencao] = useState()
+    const [controleAcesso, setControleAcesso] = useState()
+    const [faturamento, setFaturamento] = useState()
 
 
     function handleSubmit(e){
@@ -19,7 +19,7 @@ const [faturamento, setFaturamento] = useState()
     return(
         <div className='containerData'>
             <div className="dataCadCadastro">
-                <form className='dataform' onSubmit={handleSubmit}>
+                <form className='dataformMetricas' onSubmit={handleSubmit}>
                     <label>
                     Taxa Credenciamento/Mês:
                         <input type="text" name='txCredenciamento' onChange={(e)=> setTxCredenciamento(e.target.value)} value={txCredenciamento}/>
@@ -40,7 +40,7 @@ const [faturamento, setFaturamento] = useState()
                     Faturamento (R$):
                         <input type="text" name='faturamento' onChange={(e)=> setFaturamento(e.target.value)} value={faturamento}/>
                     </label>
-                    <div className='submit'>
+                    <div className='submitMetricas'>
                         <input type="submit" value="Salvar" />
                     </div>
                 </form>

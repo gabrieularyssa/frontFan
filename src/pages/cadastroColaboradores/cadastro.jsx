@@ -1,5 +1,5 @@
 import './cadastro.css'
-import Menu from '../menuLateral/menu'
+import Menu from '../../components/menuLateral/menu'
 import {useState} from 'react'
 
 function Cadastro(){

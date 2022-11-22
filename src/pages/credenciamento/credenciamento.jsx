@@ -1,5 +1,5 @@
 import './credenciamento.css'
-import Menu from '../menuLateral/menu'
+import Menu from '../../components/menuLateral/menu'
 import { useState } from 'react'
 
 function Credencimento(){
@@ -22,10 +22,10 @@ function Credencimento(){
         console.log('manipular aqui o envio do form')
     }
     return(
-        <div className='container'>
+        <div className='containerCred'>
             <Menu/>
-            <div className="dataCad">
-                <form className='dataform' onSubmit={handleSubmit}>
+            <div className="dataCadCred">
+                <form className='dataformCred' onSubmit={handleSubmit}>
                     <header>
                         <input type="text" name="search" placeholder='🔍 Pesquise Aqui' onChange={(e)=> setSearch(e.target.value)}/>
                     </header>
@@ -82,7 +82,7 @@ function Credencimento(){
                         <input type="text" name='numeroPV' onChange={(e)=> setNumeroPV(e.target.value)} value={numeroPV} placeholder='Número PV'/>
                     </label>
                     <section>
-                        <input type="submit" value="Enviar Rede" name='btnSubmit'className='submit'/>
+                        <input type="submit" value="Enviar Rede" name='btnSubmit'className='submitCred'/>
                     </section> 
                 </form>
             </div> 

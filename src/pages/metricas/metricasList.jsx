@@ -1,8 +1,7 @@
 import './metricas.css'
 import { useState } from 'react'
-import Menu from '../menuLateral/menu'
+import Menu from '../../components/menuLateral/menu.jsx'
 import MetricasCad from './metricasCad'
-// import { WiDirectionDown } from 'react-icons/wi'
 
 function MetricasList(){
     const [search, setSearch] = useState()
@@ -10,10 +9,10 @@ function MetricasList(){
         e.preventDefaul()
     }
     return(
-        <div className='container'>
+        <div className='containerMetricas'>
             <Menu/>
-            <div className="dataCad">
-                <form className='dataform' onSubmit={handleSubmit}>
+            <div className="dataCadMetricas">
+                <form className='dataformMetricas' onSubmit={handleSubmit}>
                     <header>
                         <input type="text" className="search" placeholder='🔍 Pesquise Aqui' onChange={(e)=>setSearch(e.target.value)} value={search}/>
                     </header>
@@ -21,17 +20,9 @@ function MetricasList(){
                         <p>Métricas</p>
                     </section>
                     {/* para cada item na tabela criar um botao que faça requisição de metricas */}
-                    <div className="clientes">
+                    <div className="clientesMetricas">
                         <details>
-                            <summary>Francisco José da Silva Oliveira</summary>
-                            <MetricasCad />
-                        </details>
-                        <details>
-                            <summary>Gabriela Laryssa Oliveira Moreira</summary>
-                            <MetricasCad />
-                        </details>
-                        <details>
-                            <summary>Francisco José da Silva Oliveira</summary>
+                            <summary>Nome Completo do usuario</summary>
                             <MetricasCad />
                         </details>
                     </div>
