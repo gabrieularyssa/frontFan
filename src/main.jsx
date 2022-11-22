@@ -24,7 +24,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     {/* <UsuariosList /> */}
     <BrowserRouter>
       <Routes>
-        <Route path="/" element = {<Login />}/>
+        <Route path="/adm/login" element = {<Login />}/>
         <Route path="/adm/metricas" element = {<MetricasList />}/>
         <Route path="/adm/credenciamento" element = {<Credencimento/>}/>
         <Route path="/adm/credenciamento/lista" element = {<CredenciamentoList/>}/>

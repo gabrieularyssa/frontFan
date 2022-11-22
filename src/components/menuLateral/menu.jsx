@@ -7,7 +7,7 @@ import { CiMoneyBill } from 'react-icons/ci'
 import { HiOutlineUserGroup } from 'react-icons/hi'
 import { SlGraph } from 'react-icons/sl'
 import { HiOutlineIdentification } from 'react-icons/hi'
-// import x from '../../images'
+import { Link } from 'react-router-dom'
 
 function Menu(){
     return(
@@ -16,35 +16,48 @@ function Menu(){
                     <img src="../../../src/images/logo.png"/>
                 </section>
                 <section className="btn">
-                    <button className='btnMenu'>
-                        < AiOutlineHome />
-                        INICIO
-                    </button>
-                    <button className='btnMenu'>
-                        <AiOutlineUser/>
-                        COLABORADORES
-                    </button>
-                    <button className='btnMenu'>
-                        <BsGraphUp/>
-                        MÉTRICAS
-                    </button>
-                    <button className='btnMenu'>
-                        <CiMoneyBill/>
-                        FINANCEIRO
-                    </button>
-                    <button className='btnMenu'>
-                        <HiOutlineUserGroup/>
-                        CLIENTES
-                    </button>
-                    <button className='btnMenu'>
-                        <SlGraph/>
-                        ACOMPANHAMENTO
-                    </button>
-                    {/* <AiOutlineHome/> */}
-                    <button className='btnMenu'>
-                        <HiOutlineIdentification/>
-                        CREDENCIAMENTO
-                    </button>
+                    <Link to="/adm/login">
+                        <button className='btnMenu'>
+                            < AiOutlineHome />
+                            INICIO
+                        </button>
+                    </Link>
+                    <Link to="">
+                        <button className='btnMenu'>
+                            <AiOutlineUser/>
+                            COLABORADORES
+                        </button>
+                    </Link>
+                    <Link to="/adm/metricas">
+                        <button className='btnMenu'>
+                            <BsGraphUp/>
+                            MÉTRICAS
+                        </button>
+                    </Link>
+                    <Link to ="">
+                        <button className='btnMenu'>
+                            <CiMoneyBill/>
+                            FINANCEIRO
+                        </button>
+                    </Link>
+                    <Link to="/adm/usuarios">
+                        <button className='btnMenu'>
+                            <HiOutlineUserGroup/>
+                            CLIENTES
+                        </button>
+                    </Link>
+                    <Link to="">
+                        <button className='btnMenu'>
+                            <SlGraph/>
+                            ACOMPANHAMENTO
+                        </button>
+                    </Link> 
+                    <Link to="/adm/credenciamento">
+                        <button className='btnMenu'>
+                            <HiOutlineIdentification/>
+                            CREDENCIAMENTO
+                        </button>
+                    </Link>
                 </section>
                 <section className='footer'>
                     <img src="../../../src/images/W51.png"/>
