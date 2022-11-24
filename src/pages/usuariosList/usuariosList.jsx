@@ -1,11 +1,23 @@
 import './usuarioList.css'
 import {FiEdit} from 'react-icons/fi'
 import {MdAdd} from 'react-icons/md'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import Menu from '../../components/menuLateral/menu'
+import {Link} from 'react-router-dom'
+import { UsersService } from '../../services/usersService'
 
 function UsuariosList(){
     const [search, setSearch] = useState()
+    const [users, setUsers] = useState([]) 
+    useEffect(() => {
+        const getUsers = async () => {
+        const data = await UsersService.findAll()
+        console.log(data)
+    }
+        
+        getUsers().catch((err)=> console.log(err))
+    }, [])
+
     const handleSubmit = (e) => {
         e.preventDefaul()
     }
@@ -18,7 +30,10 @@ function UsuariosList(){
                         <input type="text" className="search" placeholder='🔍 Pesquise Aqui' onChange={(e)=>setSearch(e.target.value)}/>
                     </header>
                     <section>
-                        <p>Listagem de Usuários</p><button><MdAdd/> Adicionar</button>
+                        <p>Listagem de Usuários</p>
+                        <Link to='/adm/cadastro'>
+                            <button><MdAdd/> Adicionar</button>
+                        </Link>
                     </section>
                 </form>
                     {/* para cada item na tabela criar um botao que faça requisição de metricas */}

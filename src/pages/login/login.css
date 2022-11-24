@@ -73,12 +73,13 @@ body{
     border:none;
     font-size: larger;
 }
-.input .form-data-login .btnSub{
+.input .form-data-login a .btnSub{
     background-color: red;
     color: #ffffff;
     font-weight: 700;
     font-size: larger;
     height: 28px;
+    width: 200px;
 }
 .btnSub:hover{
     color: red;

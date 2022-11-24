@@ -12,6 +12,7 @@ import Credencimento from './pages/credenciamento/credenciamento'
 import CredenciamentoList from './pages/credenciamentoList/credenciamentoList'
 import UsuariosList from './pages/usuariosList/usuariosList'
 import './index.css'
+import { AuthProvider } from './contexts/auth/AuthContext';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
@@ -23,14 +24,16 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     {/* <CredenciamentoList /> */}
     {/* <UsuariosList /> */}
     <BrowserRouter>
-      <Routes>
-        <Route path="/adm/login" element = {<Login />}/>
-        <Route path="/adm/metricas" element = {<MetricasList />}/>
-        <Route path="/adm/credenciamento" element = {<Credencimento/>}/>
-        <Route path="/adm/credenciamento/lista" element = {<CredenciamentoList/>}/>
-        <Route path="/adm/cadastro" element = {<Cadastro/>}/>
-        <Route path="/adm/usuarios" element = {<UsuariosList/>}/>
-      </Routes>
+      <AuthProvider>
+        <Routes>
+          <Route path="/adm/login" element = {<Login />}/>
+          <Route path="/adm/metricas" element = {<MetricasList />}/>
+          <Route path="/adm/credenciamento" element = {<Credencimento/>}/>
+          <Route path="/adm/credenciamento/lista" element = {<CredenciamentoList/>}/>
+          <Route path="/adm/cadastro" element = {<Cadastro/>}/>
+          <Route path="/adm/usuarios" element = {<UsuariosList/>}/>
+        </Routes>
+      </AuthProvider>
     </BrowserRouter>
   </React.StrictMode>
 )

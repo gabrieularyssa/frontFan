@@ -1,7 +1,8 @@
 import './cadastro.css'
 import Menu from '../../components/menuLateral/menu'
 import {useState} from 'react'
-
+import {Link} from 'react-router-dom'
+import { UsersService } from '../../services/usersService'
 function Cadastro(){
     //gerenciamento de input com useState
     const [completName, setCompletName] = useState()
@@ -12,24 +13,31 @@ function Cadastro(){
     const [confirmPassword, setConfirmPassword] = useState()
     const [search, setSearch] = useState()
 
-    // const handleSubmit = (e) => {
-    //     e.preventDefault()
-    //     console.log('definir aqui o envio de formulario')
-    // }
-    function handleSubmit(e){
+    async function handleSubmit(e){
         e.preventDefault()
-        console.log('manipular aqui o envio do form')
+        
+        const data = await UsersService.create({
+            "name": completName,
+            "password": password,
+            "email": emaildata,
+            "metrics": {}
+        })
+
+        console.log(data)
     }
     return(
         <div className='container'>
             <Menu/>
             <div className="dataCad">
-                <form className='dataform' onSubmit={handleSubmit}>
+                <form className='dataform' onSubmit={handleSubmit} name='formCadastro'>
                     <header>
                         <input type="text" name="search" placeholder='🔍 Pesquise Aqui' onChange={(e)=> setSearch(e.target.value)}/>
                     </header>
                     <section>
                         <p>Cadastro/Edição de Usuários</p>
+                        {/* <Link to='/adm/metricas'>
+                            <input type="submit" value="Salvar" name='btnSubmit'/>
+                        </Link> */}
                         <input type="submit" value="Salvar" name='btnSubmit'/>
                     </section>
                     <label>
