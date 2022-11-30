@@ -2,7 +2,7 @@ import './App.css'
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 
-import { BrowserRouter, Routes, Route} from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate} from "react-router-dom";
 // import Loogin from './pages/login/login.jsx'
 import Login from './pages/login/login.jsx'
 // import Menu from './components/menuLateral/menu.jsx'
@@ -26,12 +26,15 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     <BrowserRouter>
       <AuthProvider>
         <Routes>
+          <Route path="/" element= {<Navigate to="/adm/login"/>}/>
           <Route path="/adm/login" element = {<Login />}/>
           <Route path="/adm/metricas" element = {<MetricasList />}/>
           <Route path="/adm/credenciamento" element = {<Credencimento/>}/>
           <Route path="/adm/credenciamento/lista" element = {<CredenciamentoList/>}/>
           <Route path="/adm/cadastro" element = {<Cadastro/>}/>
           <Route path="/adm/usuarios" element = {<UsuariosList/>}/>
+          <Route path="/adm/financeiro" element = {""}/>
+          <Route path="/adm/acompanhamento" element = {""}/>
         </Routes>
       </AuthProvider>
     </BrowserRouter>

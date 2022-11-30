@@ -1,7 +1,8 @@
 import './cadastro.css'
 import Menu from '../../components/menuLateral/menu'
 import {useState} from 'react'
-import {Link} from 'react-router-dom'
+// import {Link} from 'react-router-dom'
+import { Link, Navigate, useNavigate } from "react-router-dom";
 import { UsersService } from '../../services/usersService'
 function Cadastro(){
     //gerenciamento de input com useState
@@ -12,15 +13,21 @@ function Cadastro(){
     const [password, setPassword] = useState()
     const [confirmPassword, setConfirmPassword] = useState()
     const [search, setSearch] = useState()
-
+    const navigate = useNavigate();
     async function handleSubmit(e){
         e.preventDefault()
+        navigate("/adm/usuarios");
         
         const data = await UsersService.create({
-            "name": completName,
-            "password": password,
-            "email": emaildata,
-            "metrics": {}
+            name: completName,
+            password: password,
+            email: emaildata,
+            metrics: {
+                accreditationRate: 111111,
+                conversionRate:1111,
+                retentionRate:111111,
+                billing: 1111
+            }
         })
 
         console.log(data)
@@ -35,7 +42,7 @@ function Cadastro(){
                     </header>
                     <section>
                         <p>Cadastro/Edição de Usuários</p>
-                        {/* <Link to='/adm/metricas'>
+                        {/* <Link to='/adm/usuarios'>
                             <input type="submit" value="Salvar" name='btnSubmit'/>
                         </Link> */}
                         <input type="submit" value="Salvar" name='btnSubmit'/>

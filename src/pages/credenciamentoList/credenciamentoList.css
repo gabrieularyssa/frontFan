@@ -56,7 +56,10 @@ header input{
 .sectionList{
     width: 80%;
     display: flex;
-    justify-content: space-evenly;
+    /* justify-content: space-evenly; */
+    justify-content: space-between;
+    padding-left: 10px;
+    padding-right: 10px;
     align-items: center;
     color: #708090;
     font-weight: 600;
@@ -75,5 +78,6 @@ header input{
     width: 35px;
     height: 30px;
     justify-content: center;
-    align-items: center;
+    /* margin-right: 120px; */
+    /* align-items: center; */
 }

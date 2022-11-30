@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 const api = axios.create({
-    baseURL: import.meta?.ENV?.BASE_API_URL || "https://5db2-177-87-14-201.sa.ngrok.io"
+    baseURL: import.meta?.ENV?.BASE_API_URL || "http://100.24.34.51:3010"
 })
 
 api.interceptors.request.use(

@@ -13,6 +13,7 @@ function UsuariosList(){
         const getUsers = async () => {
         const data = await UsersService.findAll()
         console.log(data)
+        setUsers(data)
     }
         
         getUsers().catch((err)=> console.log(err))
@@ -32,16 +33,23 @@ function UsuariosList(){
                     <section>
                         <p>Listagem de Usuários</p>
                         <Link to='/adm/cadastro'>
-                            <button><MdAdd/> Adicionar</button>
+                            <button><MdAdd/>Adicionar</button>
                         </Link>
                     </section>
                 </form>
-                    {/* para cada item na tabela criar um botao que faça requisição de metricas */}
+                    
                     <div className="clientes">
-                        <section className='sectionList'>
-                            <span>Nome completo do usuario cadastrado</span>
-                            <button><FiEdit/></button>
-                        </section>
+                    {
+                        users.map((item, index)=>{
+                            return(
+                                <section key={item.id} className='sectionList'>
+                                    <span>{item.name}</span>
+                                    <button><FiEdit/></button>
+                                </section>
+                            )
+                        })
+                    }
+                        
                     </div>
             </div> 
         </div>

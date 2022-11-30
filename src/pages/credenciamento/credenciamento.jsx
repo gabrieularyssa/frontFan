@@ -1,6 +1,8 @@
 import './credenciamento.css'
 import Menu from '../../components/menuLateral/menu'
 import { useState } from 'react'
+import { CustomersService } from '../../services/customersService'
+import { Link, Navigate, useNavigate } from "react-router-dom";
 
 function Credencimento(){
     //gerenciamento de input com useState
@@ -16,10 +18,25 @@ function Credencimento(){
     const [nomeCliente, setNomeCliente] = useState()
     const [contato, setContato] = useState()
     const [numeroPV, setNumeroPV] = useState()
+    const navigate = useNavigate();
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault()
-        console.log('manipular aqui o envio do form')
+        const data = {
+            "name": nomeCliente,
+            "companyName": razaoSocial,
+            "cnpj": CNPJ,
+            "phone": contato,
+            "uf": UF,
+            "accreditedBy": {
+                "id": "6ef8e0e0-cd7b-4220-8544-49a4b7a90623"
+            },
+            "equipmentReceivedAt": recebimentoEquipamento
+        }
+        // console.log('manipular aqui o envio do form')
+        const result = await CustomersService.create(data)
+        navigate("/adm/credenciamento/lista")
+        console.log(result)
     }
     return(
         <div className='containerCred'>
@@ -63,7 +80,7 @@ function Credencimento(){
                     </label>
                     <label>
                         Recebimento de Equipamento:
-                        <input type="text" name='recebimentoEquipamento' onChange={(e)=> setRecebimentoEquipamento(e.target.value)} value={recebimentoEquipamento} placeholder='Recebimento de Equipamento'/>
+                        <input type='datetime-local' name='recebimentoEquipamento' onChange={(e)=> setRecebimentoEquipamento(e.target.value)} value={recebimentoEquipamento} placeholder='Recebimento de Equipamento'/>
                     </label>
                     <label>
                         UF:

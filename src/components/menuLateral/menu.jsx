@@ -16,13 +16,13 @@ function Menu(){
                     <img src="../../../src/images/logo.png"/>
                 </section>
                 <section className="btn">
-                    <Link to="/adm/login">
+                    <Link to="">
                         <button className='btnMenu'>
                             < AiOutlineHome />
                             INICIO
                         </button>
                     </Link>
-                    <Link to="">
+                    <Link to="/adm/usuarios">
                         <button className='btnMenu'>
                             <AiOutlineUser/>
                             COLABORADORES
@@ -40,7 +40,7 @@ function Menu(){
                             FINANCEIRO
                         </button>
                     </Link>
-                    <Link to="/adm/usuarios">
+                    <Link to="/adm/credenciamento/lista">
                         <button className='btnMenu'>
                             <HiOutlineUserGroup/>
                             CLIENTES

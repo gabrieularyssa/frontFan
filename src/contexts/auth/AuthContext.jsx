@@ -7,11 +7,11 @@ export const AuthProvider = ({children}) => {
     const isAuthenticated = Boolean(localStorage.getItem("@auth/token"))
     useEffect(() => {
         if(!isAuthenticated) return 
-
     }, [isAuthenticated])
     const login = async (email, password) => {
         const data = await AuthService.login(email, password)
         localStorage.setItem("@auth/token", data?.token)
+        return true
     }
     return (
         <AuthContext.Provider value={{login}}>

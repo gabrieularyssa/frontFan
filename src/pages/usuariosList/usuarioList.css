@@ -55,8 +55,9 @@ header input{
 .sectionList{
     width: 80%;
     display: flex;
-    justify-content: space-evenly;
-    align-items: center;
+    /* justify-content: space-evenly; */
+    /* align-items: center; */
+    
     color: #708090;
     font-weight: 600;
     font-size: larger;
@@ -64,6 +65,9 @@ header input{
     border:solid #708090 1px;
     border-radius: 8px;
     height: 40px;
+    justify-content: space-between;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 .clientes section button{
