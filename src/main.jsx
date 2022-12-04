@@ -11,6 +11,10 @@ import MetricasList from './pages/metricas/metricasList.jsx'
 import Credencimento from './pages/credenciamento/credenciamento'
 import CredenciamentoList from './pages/credenciamentoList/credenciamentoList'
 import UsuariosList from './pages/usuariosList/usuariosList'
+import Financeiro from './pages/financeiro/financeiro';
+import FinanceiroList from './pages/financeiroList/financeiroList';
+import FinanceiroDetail from './pages/financeiroDetail/financeiroDetail';
+import Acompanhamento from './pages/acompanhamento/acompanhamento';
 import './index.css'
 import { AuthProvider } from './contexts/auth/AuthContext';
 
@@ -33,8 +37,10 @@ ReactDOM.createRoot(document.getElementById('root')).render(
           <Route path="/adm/credenciamento/lista" element = {<CredenciamentoList/>}/>
           <Route path="/adm/cadastro" element = {<Cadastro/>}/>
           <Route path="/adm/usuarios" element = {<UsuariosList/>}/>
-          <Route path="/adm/financeiro" element = {""}/>
-          <Route path="/adm/acompanhamento" element = {""}/>
+          <Route path="/adm/financeiro" element = {<Financeiro />}/>
+          <Route path="/adm/financeiro/lista" element = {<FinanceiroList />}/>
+          <Route path="/adm/financeiro/detalhe" element = {<FinanceiroDetail />}/>
+          <Route path="/adm/acompanhamento" element = {<Acompanhamento />}/>
         </Routes>
       </AuthProvider>
     </BrowserRouter>

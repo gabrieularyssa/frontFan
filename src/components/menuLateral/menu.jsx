@@ -34,7 +34,7 @@ function Menu(){
                             MÉTRICAS
                         </button>
                     </Link>
-                    <Link to ="">
+                    <Link to ="/adm/financeiro">
                         <button className='btnMenu'>
                             <CiMoneyBill/>
                             FINANCEIRO
@@ -46,7 +46,7 @@ function Menu(){
                             CLIENTES
                         </button>
                     </Link>
-                    <Link to="">
+                    <Link to="/adm/acompanhamento">
                         <button className='btnMenu'>
                             <SlGraph/>
                             ACOMPANHAMENTO

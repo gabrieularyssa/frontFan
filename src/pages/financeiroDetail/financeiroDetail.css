@@ -1,0 +1,64 @@
+.container{
+    display: flex;
+    width: 100%;
+}
+.financeiroGeral{
+    width: 100%;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    overflow-y: scroll; 
+}
+header{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+header input{
+    width: 90%;
+    height: 35px;
+    margin: 15px;
+    border-radius: 10px;
+    background-color: #ffffff;
+    color: #708090;
+}
+.financeiroGeral .dataform section{
+    display: flex;
+    width: 70%;
+    font-weight: 600;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom:10px;
+}
+.financeiroGeral .dataform section button{
+    background-color: #ff0000;
+    font-weight: 600;
+    display: flex;
+} 
+.financeiroGeral .charts{
+    width: 95%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+.financeiroGeral .charts .chart{
+    margin: 25px 8px;
+}
+.financeiroGeral .charts .chart img{
+    height: 170px;
+}
+.financeiroGeral .btn{
+    margin-top: 10px;
+    width: 95%;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+}
+.financeiroGeral .btn button{
+    background-color: #ff0000;
+    font-weight: 600;
+    height: 45px;
+}

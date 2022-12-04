@@ -13,7 +13,7 @@ function MetricasCad({metrics}){
     const [controleAcesso, setControleAcesso] = useState()
     const [faturamento, setFaturamento] = useState(metrics?.billing || 0)
     useEffect(()=> {
-        console.log(metrics)
+        // console.log(metrics)
     }, [metrics])
 
     async function handleSubmit(e){
@@ -27,7 +27,7 @@ function MetricasCad({metrics}){
                     billing: faturamento
                 }
             })
-            console.log(result)
+            // console.log(result)
         }catch(err){console.log(err)}
     }
     return(

@@ -1,0 +1,68 @@
+.container{
+    display: flex;
+    width: 100%;
+}
+.clienteDetail{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.dataform{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    background-color: #ffffff;
+    color: #708090;
+    border-radius: 10px;
+}
+header{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+}
+header input{
+    width: 90%;
+    height: 35px;
+    margin: 15px;
+    border-radius: 10px;
+    background-color: #ffffff;
+    color: #708090;
+}
+.dataform section{
+    display: flex;
+    width: 70%;
+    font-weight: 600;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom:30px;
+}
+.container .clienteDetail .sectionList{
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 10px;
+    padding-right: 10px;
+    align-items: center;
+    color: #708090;
+    font-weight: 600;
+    font-size: larger;
+    margin: 5px;
+    border:solid #708090 1px;
+    border-radius: 8px;
+    height: 40px;
+}
+.clienteDetail section button{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    background-color: #ff0000;
+    width: 35px;
+    height: 30px;
+    justify-content: center;
+    align-items: center;
+    /* margin-right: 120px; */
+    /* align-items: center; */
+}

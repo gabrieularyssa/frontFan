@@ -1,0 +1,101 @@
+.container{
+    display: flex;
+    width: 100%;
+}
+.dataform{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    background-color: #ffffff;
+    color: #708090;
+    border-radius: 10px;
+}
+.acompanhamento{
+    width: 100%;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    
+}
+.acompanhamento .dataform section{
+    display: flex;
+    width: 70%;
+    font-weight: 600;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom:10px;
+}
+.data{
+    width: 95%;
+    display: flex;
+}
+.dataum{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+.dataum section img{
+    margin-top: 30px;
+    width: 95%;
+}
+.dataum section p{
+    margin: 0;
+    font-size: larger;
+    font-weight: 600;
+    color: #708090;
+}
+.dataum section{
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.datadois{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow:auto; 
+    height: 500px;
+}
+.datadois a{
+    width: 90%;
+}
+.datadois p{
+    margin: 0;
+}
+.datadois a section{
+    color: #708090;
+    font-size: large;
+    font-weight: 600;
+    border: solid 1px #708090;
+    margin-top: 10px;
+    width: 100%;
+    border-radius: 8px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.nome:hover{
+    color: #ff0000;
+}
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track-piece {
+    background-color: rgb(255, 255, 255);
+    border: 4px solid #708090
+}
+::-webkit-scrollbar-thumb:vertical,
+::-webkit-scrollbar-thumb:horizontal {
+    background-color: #ffffff
+}
+/* Cor do indicador de rolagem - ao passar o mouse */
+::-webkit-scrollbar-thumb:vertical:hover,
+::-webkit-scrollbar-thumb:horizontal:hover {
+    background-color: #717171
+}
