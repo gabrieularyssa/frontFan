@@ -15,7 +15,6 @@ function UsuariosList(){
         console.log(data)
         setUsers(data)
     }
-        
         getUsers().catch((err)=> console.log(err))
     }, [])
 

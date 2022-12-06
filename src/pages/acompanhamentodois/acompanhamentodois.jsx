@@ -1,9 +1,10 @@
-import './acompanhamento.css'
+import './acompanhamentodois.css'
 import Menu from '../../components/menuLateral/menu'
 import { useState, useEffect } from "react";
 import { Link, Navigate, useNavigate } from "react-router-dom";
 
-function Acompanhamento(){
+function AcompanhamentoDois(){
+
     const handleSubmit = (e) =>{
         e.preventDefault()
     }
@@ -25,68 +26,70 @@ function Acompanhamento(){
                             <section className='chart'>
                                 <img src="../../../src/images/chart.png" alt="" />
                             </section>
-                            <section className="text">
-                                <p>Total de credenciamento por colaborador</p>
-                                <p>Selecione um colaborador e analise sua estatistica</p>
+                            <section className="chart">
+                                <img src="../../../src/images/chart.png" alt="" />
+                                <Link to='/adm/acompanhamento/detalhes'>
+                                    <button>Detalhes</button>
+                                </Link>
                             </section>
                         </div>
                         <div className="datadois">
-                            <Link to="/adm/acompanhamento/dois">
+                            <Link to="adm/acompanhamento/2">
                                 <section className='nome'>
                                     <p>Nome completo do usuario para analise</p>
                                 </section>
                             </Link>
-                            <Link to="/adm/acompanhamento/dois">
+                            <Link to="adm/acompanhamento/2">
                                 <section className='nome'>
                                     <p>Nome completo do usuario para analise</p>
                                 </section>
                             </Link>
-                            <Link to="/adm/acompanhamento/dois">
+                            <Link to="adm/acompanhamento/2">
                                 <section className='nome'>
                                     <p>Nome completo do usuario para analise</p>
                                 </section>
                             </Link>
-                            <Link to="/adm/acompanhamento/dois">
+                            <Link to="adm/acompanhamento/2">
                                 <section className='nome'>
                                     <p>Nome completo do usuario para analise</p>
                                 </section>
                             </Link>
-                            <Link to="/adm/acompanhamento/dois">
+                            <Link to="adm/acompanhamento/2">
                                 <section className='nome'>
                                     <p>Nome completo do usuario para analise</p>
                                 </section>
                             </Link>
-                            <Link to="/adm/acompanhamento/dois">
+                            <Link to="">
                                 <section className='nome'>
                                     <p>Nome completo do usuario para analise</p>
                                 </section>
                             </Link>
-                            <Link to="/adm/acompanhamento/dois">
+                            <Link to="">
                                 <section className='nome'>
                                     <p>Nome completo do usuario para analise</p>
                                 </section>
                             </Link>
-                            <Link to="/adm/acompanhamento/dois">
+                            <Link to="">
                                 <section className='nome'>
                                     <p>Nome completo do usuario para analise</p>
                                 </section>
                             </Link>
-                            <Link to="/adm/acompanhamento/dois">
+                            <Link to="">
                                 <section className='nome'>
                                     <p>Nome completo do usuario para analise</p>
                                 </section>
                             </Link>
-                            <Link to="/adm/acompanhamento/dois">
+                            <Link to="">
                                 <section className='nome'>
                                     <p>Nome completo do usuario para analise</p>
                                 </section>
                             </Link>
-                            <Link to="/adm/acompanhamento/dois">
+                            <Link to="">
                                 <section className='nome'>
                                     <p>Nome completo do usuario para analise</p>
                                 </section>
                             </Link>
-                            <Link to="/adm/acompanhamento/dois">
+                            <Link to="">
                                 <section className='nome'>
                                     <p>Nome completo do usuario para analise</p>
                                 </section>
@@ -98,4 +101,6 @@ function Acompanhamento(){
     )
 }
 
-export default Acompanhamento
+
+
+export default AcompanhamentoDois
