@@ -16,7 +16,7 @@ function Menu(){
                     <img src="../../../src/images/logo.png"/>
                 </section>
                 <section className="btn">
-                    <Link to="">
+                    <Link to="/adm/inicio">
                         <button className='btnMenu'>
                             < AiOutlineHome />
                             INICIO

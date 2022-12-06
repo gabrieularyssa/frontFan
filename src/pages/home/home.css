@@ -1,0 +1,35 @@
+.container{
+    width: 100%;
+}
+.container .dataHome{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+/* section p{
+    
+} */
+.barra{
+    display: flex;
+    width: 120px;
+    justify-content: space-between;
+    align-items: center;
+}
+.barra select {
+   background-color: red;
+   height: 35px;
+   border-radius: 8px;
+   padding: 5px;
+   margin: 8px;
+   font-size: large;
+}
+.a{
+    display: flex;
+    width: 180px;
+    justify-content: space-between;
+    align-items: center;
+}
+.dataHome .mapa{
+    overflow-y: scroll;
+    margin-bottom: 30px;
+}
