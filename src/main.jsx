@@ -16,6 +16,7 @@ import FinanceiroList from './pages/financeiroList/financeiroList';
 import FinanceiroDetail from './pages/financeiroDetail/financeiroDetail';
 import Acompanhamento from './pages/acompanhamento/acompanhamento';
 import AcompanhamentoDois from './pages/acompanhamentodois/acompanhamentodois';
+import AcompanhamentoDetalhe from './pages/acompanhamentoDetalhe/acomapanhamentoDetalhe';
 import Home from './pages/home/home';
 import './index.css'
 import { AuthProvider } from './contexts/auth/AuthContext';
@@ -44,6 +45,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
           <Route path="/adm/financeiro/detalhe" element = {<FinanceiroDetail />}/>
           <Route path="/adm/acompanhamento" element = {<Acompanhamento />}/>
           <Route path="/adm/acompanhamento/dois" element = {<AcompanhamentoDois />}/>
+          <Route path="/adm/acompanhamento/detalhe" element = {<AcompanhamentoDetalhe />}/>
           <Route path="/adm/inicio" element = {<Home />}/>
         </Routes>
       </AuthProvider>

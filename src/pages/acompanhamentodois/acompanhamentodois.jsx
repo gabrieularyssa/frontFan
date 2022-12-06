@@ -28,7 +28,7 @@ function AcompanhamentoDois(){
                             </section>
                             <section className="chart">
                                 <img src="../../../src/images/chart.png" alt="" />
-                                <Link to='/adm/acompanhamento/detalhes'>
+                                <Link to='/adm/acompanhamento/detalhe'>
                                     <button>Detalhes</button>
                                 </Link>
                             </section>
