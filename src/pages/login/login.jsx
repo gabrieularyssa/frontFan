@@ -56,7 +56,7 @@ function Login() {
       </div>
       <div className="style">
         <div className="divimg">
-          <img src="../../../src/images/image3.png" className="imageHome" />
+          <img src="../../../src/images/image3.png" alt="" className="imageHome" />
         </div>
       </div>
     </div>

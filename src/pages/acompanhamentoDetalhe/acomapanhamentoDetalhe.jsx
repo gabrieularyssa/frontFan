@@ -20,7 +20,7 @@ function AcompanhamentoDetalhe(){
                         <p>Acompanhamento Detalhado</p>
                     </section>
                 </form>
-                <div className="dataDetalhe">
+                <div className="data">
                     <div className="dataChart">
                         <section className='chart'>
                             <img src="../../../src/images/chart.png" alt="" />

@@ -19,7 +19,7 @@ function Home(){
                     <section>
                         <p>Bem-vindo ao Clube de Benefícios do Grupo Fan!</p>
                         <div className="barra">
-                            <Link to='/adm/cadastro' className='a'>
+                            <Link to='' className='a'>
                                 <img src="../../../src/images/vector.png" alt="" />
                             </Link>
                             <select name="date">

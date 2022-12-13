@@ -22,15 +22,16 @@
 }
 .acompanhamento .dataform section{
     display: flex;
-    width: 70%;
+    width: 95%;
     font-weight: 600;
     align-items: center;
     justify-content: space-between;
     margin-bottom:10px;
 }
-.data{
+.dataa{
     width: 95%;
     display: flex;
+    
 }
 .dataum{
     width: 50%;

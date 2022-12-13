@@ -33,11 +33,11 @@ header input{
 }
 .dataform section{
     display: flex;
-    width: 70%;
+    width: 90%;
     font-weight: 600;
     align-items: center;
     justify-content: space-between;
-    margin-bottom:30px;
+    margin-bottom:10px;
 }
 .container .clienteDetail .sectionList{
     width: 80%;

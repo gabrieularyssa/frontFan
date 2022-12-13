@@ -40,7 +40,7 @@ function Menu(){
                             FINANCEIRO
                         </button>
                     </Link>
-                    <Link to="/adm/credenciamento/lista">
+                    <Link to="/adm/clientes">
                         <button className='btnMenu'>
                             <HiOutlineUserGroup/>
                             CLIENTES

@@ -21,7 +21,7 @@ function AcompanhamentoDois(){
                         <p>Acompanhamento</p>
                     </section>
                 </form>
-                <div className="data">
+                <div className="dataa">
                         <div className="dataum">
                             <section className='chart'>
                                 <img src="../../../src/images/chart.png" alt="" />

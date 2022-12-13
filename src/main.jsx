@@ -18,6 +18,7 @@ import Acompanhamento from './pages/acompanhamento/acompanhamento';
 import AcompanhamentoDois from './pages/acompanhamentodois/acompanhamentodois';
 import AcompanhamentoDetalhe from './pages/acompanhamentoDetalhe/acomapanhamentoDetalhe';
 import Home from './pages/home/home';
+import Cliente from './pages/clientes/clientes';
 import './index.css'
 import { AuthProvider } from './contexts/auth/AuthContext';
 
@@ -47,6 +48,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
           <Route path="/adm/acompanhamento/dois" element = {<AcompanhamentoDois />}/>
           <Route path="/adm/acompanhamento/detalhe" element = {<AcompanhamentoDetalhe />}/>
           <Route path="/adm/inicio" element = {<Home />}/>
+          <Route path='/adm/clientes' element = {<Cliente/>}/>
         </Routes>
       </AuthProvider>
     </BrowserRouter>
