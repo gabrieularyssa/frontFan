@@ -15,14 +15,12 @@ function MetricasList() {
     };
     getUsers().catch((err) => console.log(err));
   }, []);
-  const handleSubmit = (e) => {
-    e.preventDefaul();
-  };
+  
   return (
     <div className="containerMetricas">
       <Menu />
       <div className="dataCadMetricas">
-        <form className="dataformMetricas" onSubmit={handleSubmit}>
+        <div className="dataformMetricas" >
           <header>
             <input
               type="text"
@@ -41,12 +39,12 @@ function MetricasList() {
               return (
                 <details key={item.id}>
                   <summary>{item.name}</summary>
-                  <MetricasCad metrics={item.metrics}/>
+                  <MetricasCad metrics={item.metrics} id={item.id}/>
                 </details>
               );
             })}
           </div>
-        </form>
+        </div>
       </div>
     </div>
   );

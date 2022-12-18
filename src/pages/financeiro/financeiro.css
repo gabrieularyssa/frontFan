@@ -39,6 +39,7 @@ header input{
 } 
 .financeiroGeral .charts{
     width: 95%;
+    height: 100%;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
@@ -47,18 +48,21 @@ header input{
 .financeiroGeral .charts .chart{
     margin: 25px 8px;
 }
-.financeiroGeral .charts .chart img{
-    height: 170px;
-}
 .financeiroGeral .btn{
     margin-top: 10px;
-    width: 95%;
+    width: 75%;
+    height: auto;
     display: flex;
     flex-direction: row-reverse;
     justify-content: space-between;
+    margin-bottom: 20px;
 }
 .financeiroGeral .btn button{
     background-color: #ff0000;
     font-weight: 600;
     height: 45px;
+}
+iframe{
+    width: 80%;
+    height: 100%;
 }

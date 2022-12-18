@@ -47,7 +47,7 @@ header input{
     color: #708090;
 }
 .clientes{
-    width: 70%;
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;

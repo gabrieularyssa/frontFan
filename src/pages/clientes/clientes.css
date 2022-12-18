@@ -86,10 +86,16 @@
 .clienteNome{
     display: flex;
     align-items: center;
-    justify-content: space-around;
-    margin: 10px;
+    justify-content: space-between;
+    margin: 2.5px;
+    padding: 0 5px;
 }
 .edit{
     background-color: #ff0000;
     height: 35px;
 }
+/* iframe{
+    width: auto;
+    height: auto;
+    overflow-y: scroll;
+} */

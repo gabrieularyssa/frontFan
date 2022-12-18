@@ -29,12 +29,7 @@ function Financeiro(){
                     </section>
                 </form>
                 <div className="charts">
-                    <section className='chart'><img src="../../../src/images/chart1.png" alt="" /></section>
-                    <section className='chart'><img src="../../../src/images/chart2.png" alt="" /></section>
-                    <section className='chart'><img src="../../../src/images/chart3.png" alt="" /></section>
-                    <section className='chart'><img src="../../../src/images/chart4.png" alt="" /></section>
-                    <section className='chart'><img src="../../../src/images/chart5.png" alt="" /></section>
-                    <section className='chart'><img src="../../../src/images/chart6.png" alt="" /></section>
+                    <iframe title="BASE DE DADOS BI 2022 FANCARD CB" width="1140" height="541.25" src="https://app.powerbi.com/reportEmbed?reportId=6c712091-6f05-4c22-9bd7-aafcd34e6826&autoAuth=true&ctid=81700664-f435-4316-89ef-6147d2bc6bad" frameborder="0" allowFullScreen="true"></iframe>
                 </div>
                 <div className="btn">
                     <button onClick={clientDetail}>Detalhe Por Cliente</button>

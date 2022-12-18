@@ -1,10 +1,7 @@
-// import x from '../metricas/metricas.css'
-// import Menu from '../menuLateral/menu'
 import {useEffect, useState} from 'react'
 import { UsersService } from '../../services/usersService'
 
-
-function MetricasCad({metrics}){
+function MetricasCad({id, metrics}){
     
 //gerenciamento de input com useState
     const [txCredenciamento, setTxCredenciamento] = useState(metrics?.accreditationRate || 0)
@@ -18,8 +15,9 @@ function MetricasCad({metrics}){
 
     async function handleSubmit(e){
         e.preventDefault()
+        console.log('so teste')
         try{
-            const result = await UsersService.update({
+            const result = await UsersService.update(id, {
                 metrics:{
                     accreditationRate: txCredenciamento,
                     conversionRate: txConversao,
@@ -27,13 +25,14 @@ function MetricasCad({metrics}){
                     billing: faturamento
                 }
             })
-            // console.log(result)
-        }catch(err){console.log(err)}
+            console.log('result:', result)
+
+        }catch(err){console.log('error:', err)}
     }
     return(
         <div className='containerData'>
             <div className="dataCadCadastro">
-                <form className='dataformMetricas' onSubmit={handleSubmit}>
+                <form name='metricas' className='dataformMetricas' onSubmit={handleSubmit}>
                     <label>
                     Taxa Credenciamento/Mês:
                         <input type="text" name='txCredenciamento' onChange={(e)=> setTxCredenciamento(e.target.value)} value={txCredenciamento}/>
@@ -55,7 +54,7 @@ function MetricasCad({metrics}){
                         <input type="text" name='faturamento' onChange={(e)=> setFaturamento(e.target.value)} value={faturamento}/>
                     </label>
                     <div className='submitMetricas'>
-                        <input type="submit" value="Salvar" />
+                        <input type="submit" className="btnsub" value="Salvar" />
                     </div>
                 </form>
             </div> 
