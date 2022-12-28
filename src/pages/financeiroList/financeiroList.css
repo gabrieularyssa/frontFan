@@ -39,7 +39,12 @@ header input{
     justify-content: space-between;
     margin-bottom:10px;
 }
-.container .clienteDetail .sectionList{
+.financeiro{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.container .clienteDetail a .sectionList{
     width: 80%;
     display: flex;
     justify-content: space-between;

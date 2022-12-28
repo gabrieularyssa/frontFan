@@ -2,8 +2,22 @@ import './financeiroList.css'
 import Menu from '../../components/menuLateral/menu'
 import { Link, Navigate, useNavigate } from "react-router-dom";
 import {AiOutlineEye} from 'react-icons/ai'
+import { CustomersService } from '../../services/customersService'
+import { useEffect, useState } from 'react'
+import {FiEdit} from 'react-icons/fi'
+
+
 
 function FinanceiroList(){
+    const [users, setUsers] = useState([])
+    useEffect(()=> {
+        const getUsers = async () =>  {
+            const data = await CustomersService.findAll()
+            console.log(data)
+            setUsers(data)
+        }
+        getUsers().catch((err)=> console.log(err))
+    }, [])
     const handleSubmit = (e) => {
         e.preventDefault()
     }
@@ -25,18 +39,16 @@ function FinanceiroList(){
                         <p>Financeiro</p>
                     </section>
                 </form>
-                <section className='sectionList'>
-                    <span>Escrever Aqui o Nome Completo</span>
-                    <button onClick={btnEye}><AiOutlineEye/></button>
-                </section>
-                <section className='sectionList'>
-                    <span>Escrever Aqui o Nome Completo</span>
-                    <button onClick={btnEye}><AiOutlineEye/></button>
-                </section>
-                <section className='sectionList'>
-                    <span>Escrever Aqui o Nome Completo</span>
-                    <button onClick={btnEye}><AiOutlineEye/></button>
-                </section>
+                {users.map((item, index)=>{
+                    return(
+                        <Link to="/adm/financeiro/detalhe" className='financeiro'>
+                            <section key={item.id} className='sectionList'>
+                                <span>{item.name}</span>
+                                <button><FiEdit/></button>
+                            </section>
+                        </Link>
+                    )
+                })}
             </div>
         </div>
     )

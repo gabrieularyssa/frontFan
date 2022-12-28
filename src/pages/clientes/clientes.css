@@ -12,7 +12,7 @@
 }
 .dataform section{
     display: flex;
-    width: 90%;
+    width: 80%;
     font-weight: 600;
     align-items: center;
     justify-content: space-between;

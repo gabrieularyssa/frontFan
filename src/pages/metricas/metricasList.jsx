@@ -15,7 +15,9 @@ function MetricasList() {
     };
     getUsers().catch((err) => console.log(err));
   }, []);
-  
+  useEffect(()=>{
+    console.log(users)
+  }, [users])
   return (
     <div className="containerMetricas">
       <Menu />
@@ -39,7 +41,7 @@ function MetricasList() {
               return (
                 <details key={item.id}>
                   <summary>{item.name}</summary>
-                  <MetricasCad metrics={item.metrics} id={item.id}/>
+                  <MetricasCad metrics={item?.metrics} id={item?.id} states={item?.statesToProspect}/>
                 </details>
               );
             })}

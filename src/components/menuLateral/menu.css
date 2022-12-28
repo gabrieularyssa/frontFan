@@ -11,10 +11,8 @@ body{
     width: 100%;
     height: 100%;
 }
-/* a{
-    background-color: #ff0000;
-} */
-a .btnMenu{
+
+ .btnMenufalse{
     margin: 0;
     padding: 0;
     margin-bottom: 20px;
@@ -29,6 +27,22 @@ a .btnMenu{
     height: 100%;
     width: 100%;
 }
+    .btnMenutrue{
+        margin: 0;
+        padding: 0;
+        margin-bottom: 20px;
+        height: 65px;
+        background-color: #720000;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        justify-content: space-evenly;
+        font-weight: 500;
+        height: 100%;
+        width: 100%;
+        border: none;
+    }
 
 a:link {
     text-decoration: none;

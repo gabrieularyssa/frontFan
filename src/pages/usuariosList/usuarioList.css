@@ -22,10 +22,10 @@
 }
 .dataCad .dataform section{
     display: flex;
-    width: 70%;
+    width: 100%;
     font-weight: 600;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
     margin-bottom:30px;
 }
 .dataCad .dataform section button{
@@ -57,7 +57,6 @@ header input{
     display: flex;
     /* justify-content: space-evenly; */
     /* align-items: center; */
-    
     color: #708090;
     font-weight: 600;
     font-size: larger;
@@ -69,7 +68,9 @@ header input{
     padding-left: 10px;
     padding-right: 10px;
 }
-
+/* .list{
+    width: 100%;
+} */
 .clientes section button{
     margin: 0;
     padding: 0;

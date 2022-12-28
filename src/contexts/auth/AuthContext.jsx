@@ -6,7 +6,14 @@ export const AuthProvider = ({children}) => {
     const [user, setUser] = useState(null)
     const isAuthenticated = Boolean(localStorage.getItem("@auth/token"))
     useEffect(() => {
+
         if(!isAuthenticated) return 
+        const getMe = async () =>{ 
+            const res = await AuthService.getMe()
+            // console.log(res)
+            setUser(res)
+        }
+        getMe().catch(console.error)
     }, [isAuthenticated])
     const login = async (email, password) => {
         const data = await AuthService.login(email, password)
@@ -14,7 +21,7 @@ export const AuthProvider = ({children}) => {
         return true
     }
     return (
-        <AuthContext.Provider value={{login}}>
+        <AuthContext.Provider value={{login, user}}>
             {children}
         </AuthContext.Provider>
     )

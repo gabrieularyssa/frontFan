@@ -7,9 +7,22 @@ import { CiMoneyBill } from 'react-icons/ci'
 import { HiOutlineUserGroup } from 'react-icons/hi'
 import { SlGraph } from 'react-icons/sl'
 import { HiOutlineIdentification } from 'react-icons/hi'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate, useLocation } from 'react-router-dom'
+// import { useLocation } from 'react-router-dom';
 
 function Menu(){
+    const { pathname } = useLocation()
+    const localHome = (pathname === "/adm/inicio")
+    const localFinanceiro = (pathname === "/adm/financeiro" || pathname === "/adm/financeiro/lista" || pathname === "/adm/financeiro/detalhe")
+    const localColaborador = (pathname === "/adm/usuarios" || pathname === "/adm/cadastro")
+    const localMetricas = (pathname === "/adm/metricas")
+    const localClientes = (pathname === "/adm/clientes" )
+    const localAcompanhamento = (pathname === "/adm/acompanhamento" || pathname === "/adm/acompanhamento/dois" || pathname === "/adm/acompanhamento/detalhe")
+    const localCredenciamento = (pathname === "/adm/credenciamento")
+    
+    // const navigate = Navigate()
+    const navigate = useNavigate()
+
     return(
             <div className="menu-vert">
                 <section className='logo'>
@@ -17,43 +30,44 @@ function Menu(){
                 </section>
                 <section className="btn">
                     <Link to="/adm/inicio">
-                        <button className='btnMenu'>
+                        <button className={`btnMenu${localHome}`}>
                             < AiOutlineHome />
                             INICIO
                         </button>
                     </Link>
                     <Link to="/adm/usuarios">
-                        <button className='btnMenu'>
+                        <button className={`btnMenu${localColaborador}`}>
                             <AiOutlineUser/>
                             COLABORADORES
                         </button>
                     </Link>
                     <Link to="/adm/metricas">
-                        <button className='btnMenu'>
+                        <button className={`btnMenu${localMetricas}`}>
                             <BsGraphUp/>
                             MÉTRICAS
                         </button>
                     </Link>
-                    <Link to ="/adm/financeiro">
-                        <button className='btnMenu'>
+                    
+                    <Link to="/adm/financeiro">
+                        <button className={`btnMenu${localFinanceiro}`}>
                             <CiMoneyBill/>
                             FINANCEIRO
                         </button>
                     </Link>
                     <Link to="/adm/clientes">
-                        <button className='btnMenu'>
+                        <button className={`btnMenu${localClientes}`}>
                             <HiOutlineUserGroup/>
                             CLIENTES
                         </button>
                     </Link>
                     <Link to="/adm/acompanhamento">
-                        <button className='btnMenu'>
+                        <button className={`btnMenu${localAcompanhamento}`}>
                             <SlGraph/>
                             ACOMPANHAMENTO
                         </button>
                     </Link> 
                     <Link to="/adm/credenciamento">
-                        <button className='btnMenu'>
+                        <button className={`btnMenu${localCredenciamento}`}>
                             <HiOutlineIdentification/>
                             CREDENCIAMENTO
                         </button>

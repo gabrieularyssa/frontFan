@@ -1,28 +1,38 @@
 import {useEffect, useState} from 'react'
+import { LocationsService } from '../../services/locationService'
 import { UsersService } from '../../services/usersService'
 
-function MetricasCad({id, metrics}){
+function MetricasCad({id, metrics, states}){
     
 //gerenciamento de input com useState
     const [txCredenciamento, setTxCredenciamento] = useState(metrics?.accreditationRate || 0)
     const [txConversao, setTxConversao] = useState(metrics?.conversionRate || 0)
     const [txRetencao, setTxRetencao] = useState(metrics?.retentionRate || 0)
-    const [controleAcesso, setControleAcesso] = useState()
+    const [statesToProspect, setStatesToProspect] = useState([])
+    const [stateSelected, setStateSelected] = useState(states[0])
     const [faturamento, setFaturamento] = useState(metrics?.billing || 0)
+    
+    // const []
     useEffect(()=> {
-        // console.log(metrics)
-    }, [metrics])
+        const getLocation = async () =>  {
+            const data = await LocationsService.getStates()
+            // console.log(data)
+            setStatesToProspect(data)
+        }
+        getLocation().catch((err)=> console.log(err))
+    }, [])
 
     async function handleSubmit(e){
         e.preventDefault()
         console.log('so teste')
         try{
             const result = await UsersService.update(id, {
+                statesToProspect: [stateSelected],
                 metrics:{
                     accreditationRate: txCredenciamento,
                     conversionRate: txConversao,
                     retentionRate: txRetencao,
-                    billing: faturamento
+                    billing: faturamento,
                 }
             })
             console.log('result:', result)
@@ -47,7 +57,13 @@ function MetricasCad({id, metrics}){
                     </label>
                     <label>
                         Estado a prospectar:
-                        <input type="text" name='controleAcesso'onChange={(e)=> setControleAcesso(e.target.value)} value={controleAcesso}/>
+                        {/* <input type="text" name='controleAcesso'onChange={(e)=> setControleAcesso(e.target.value)} value={states.length?states[0]:"-"}/> */}
+                        <select className="metricasop" onChange={(e)=> setStateSelected(e.target.value)} value={stateSelected}>
+                            <option value="Default" disabled>Selecione um Estados</option>
+                            {
+                                statesToProspect.map((item)=> (<option value={item.sigla} key={item.id}>{item.sigla}</option>))
+                            }
+                        </select>
                     </label>
                     <label>
                     Faturamento (R$):

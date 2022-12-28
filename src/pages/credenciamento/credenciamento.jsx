@@ -3,7 +3,7 @@ import Menu from '../../components/menuLateral/menu'
 import { useState } from 'react'
 import { CustomersService } from '../../services/customersService'
 import { Link, Navigate, useNavigate } from "react-router-dom";
-
+import useAuth from '../../hooks/useAuth';
 function Credencimento(){
     //gerenciamento de input com useState
     const [razaoSocial, setRazaoSocial] = useState()
@@ -19,6 +19,7 @@ function Credencimento(){
     const [contato, setContato] = useState()
     const [numeroPV, setNumeroPV] = useState()
     const navigate = useNavigate();
+    const {user} = useAuth()
 
     const handleSubmit = async (e) => {
         e.preventDefault()
@@ -29,7 +30,7 @@ function Credencimento(){
             "phone": contato,
             "uf": UF,
             "accreditedBy": {
-                "id": "6ef8e0e0-cd7b-4220-8544-49a4b7a90623"
+                "id": user?.id
             },
             "equipmentReceivedAt": recebimentoEquipamento
         }

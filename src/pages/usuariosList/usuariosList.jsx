@@ -29,7 +29,7 @@ function UsuariosList(){
                     <header>
                         <input type="text" className="search" placeholder='🔍 Pesquise Aqui' onChange={(e)=>setSearch(e.target.value)}/>
                     </header>
-                    <section>
+                    <section className='list'>
                         <p>Listagem de Usuários</p>
                         <Link to='/adm/cadastro'>
                             <button><MdAdd/>Adicionar</button>

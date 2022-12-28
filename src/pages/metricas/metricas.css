@@ -26,6 +26,14 @@
     height: auto;
     overflow-y: scroll; 
 }
+.metricasop{
+    background-color: #ffffff;
+    height: 35px;
+    border-radius: 8px;
+    color: #708090;
+    margin: 15px;
+    width: 100%;
+}
 .dataCadCadastro{
     width: 83%;
     background-color: #ffffff;

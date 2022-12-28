@@ -2,12 +2,22 @@ import './acompanhamentodois.css'
 import Menu from '../../components/menuLateral/menu'
 import { useState, useEffect } from "react";
 import { Link, Navigate, useNavigate } from "react-router-dom";
+import { CustomersService } from '../../services/customersService'
 
 function AcompanhamentoDois(){
 
     const handleSubmit = (e) =>{
         e.preventDefault()
     }
+    const [users, setUsers] = useState([])
+    useEffect(()=> {
+        const getUsers = async () =>  {
+            const data = await CustomersService.findAll()
+            console.log(data)
+            setUsers(data)
+        }
+        getUsers().catch((err)=> console.log(err))
+    }, [])
     const [search, setSearch] = useState();
     return(
         <div className="container">
@@ -34,66 +44,18 @@ function AcompanhamentoDois(){
                             </section>
                         </div>
                         <div className="datadois">
-                            <Link to="adm/acompanhamento/2">
-                                <section className='nome'>
-                                    <p>Nome completo do usuario para analise</p>
-                                </section>
+                            <Link to='/adm/acompanhamento/detalhe'>
+                                {
+                                    users.map((item, index)=>{
+                                        return(
+                                            <section className='nome' key={item.id}>
+                                                <p>{item.name}</p>
+                                            </section>
+                                        )
+                                    })
+                                }
                             </Link>
-                            <Link to="adm/acompanhamento/2">
-                                <section className='nome'>
-                                    <p>Nome completo do usuario para analise</p>
-                                </section>
-                            </Link>
-                            <Link to="adm/acompanhamento/2">
-                                <section className='nome'>
-                                    <p>Nome completo do usuario para analise</p>
-                                </section>
-                            </Link>
-                            <Link to="adm/acompanhamento/2">
-                                <section className='nome'>
-                                    <p>Nome completo do usuario para analise</p>
-                                </section>
-                            </Link>
-                            <Link to="adm/acompanhamento/2">
-                                <section className='nome'>
-                                    <p>Nome completo do usuario para analise</p>
-                                </section>
-                            </Link>
-                            <Link to="">
-                                <section className='nome'>
-                                    <p>Nome completo do usuario para analise</p>
-                                </section>
-                            </Link>
-                            <Link to="">
-                                <section className='nome'>
-                                    <p>Nome completo do usuario para analise</p>
-                                </section>
-                            </Link>
-                            <Link to="">
-                                <section className='nome'>
-                                    <p>Nome completo do usuario para analise</p>
-                                </section>
-                            </Link>
-                            <Link to="">
-                                <section className='nome'>
-                                    <p>Nome completo do usuario para analise</p>
-                                </section>
-                            </Link>
-                            <Link to="">
-                                <section className='nome'>
-                                    <p>Nome completo do usuario para analise</p>
-                                </section>
-                            </Link>
-                            <Link to="">
-                                <section className='nome'>
-                                    <p>Nome completo do usuario para analise</p>
-                                </section>
-                            </Link>
-                            <Link to="">
-                                <section className='nome'>
-                                    <p>Nome completo do usuario para analise</p>
-                                </section>
-                            </Link>
+                            
                         </div>
                     </div>
             </div>
